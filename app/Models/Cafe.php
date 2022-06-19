@@ -41,7 +41,7 @@ class Cafe extends Model
         $path = base_path("public") . "/" . $value;
 
         if (File::exists($path)) {
-            return  env("APP_URL") . "/" . $value;
+            return  url($value);
         }
 
         return null;
