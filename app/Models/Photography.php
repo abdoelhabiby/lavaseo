@@ -3,8 +3,9 @@
 namespace App\Models;
 
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\File;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Photography extends Model
 {
@@ -38,7 +39,13 @@ class Photography extends Model
 
     public function getPhotoAttribute($value)
     {
-        return $value ? env("APP_URL") . "/" . $value : null;
+        $path = base_path("public") . "/" . $value;
+
+        if (File::exists($path)) {
+            return  env("APP_URL") . "/" . $value;
+        }
+
+        return null;
     }
 
 }
