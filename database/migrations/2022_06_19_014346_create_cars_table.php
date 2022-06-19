@@ -20,7 +20,7 @@ return new class extends Migration
             $table->float("price");
             $table->string("address");
             $table->string("email");
-            $table->string("photo");
+            $table->string("photo")->nullable();
             $table->string("category");
             $table->string("model");
             $table->string("vr_video")->nullable();

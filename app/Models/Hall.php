@@ -35,5 +35,9 @@ class Hall extends Model
 
     }
 
+    public function getPhotoAttribute($value)
+    {
+        return $value ? env("APP_URL") . "/" . $value : null;
+    }
 
 }
