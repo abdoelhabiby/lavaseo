@@ -42,7 +42,7 @@ class PhotographyController extends BaseController
             "address" => "required|min:2|max:225",
             "mobile" => "required|digits_between:5,15",
             "price" => "required|numeric",
-            "photo" => "nullable|image|mimes:png,jpg,jpeg",
+            "photo" => "nullable|image|mimes:png,jpg,jpeg|max:2048",
             'package' => 'required|min:2|max:150',
 
 
@@ -80,7 +80,7 @@ class PhotographyController extends BaseController
             "address" => "required|min:2|max:225",
             "mobile" => "required|digits_between:5,15",
             "price" => "required|numeric",
-            "photo" => "nullable|image|mimes:png,jpg,jpeg",
+            "photo" => "nullable|image|mimes:png,jpg,jpeg|max:2048",
             "vr_video" => "nullable|string", // for now
             'package' => 'required|min:2|max:150',
 

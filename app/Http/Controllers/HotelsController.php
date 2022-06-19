@@ -43,7 +43,7 @@ class HotelsController extends BaseController
             "mobile" => "required|digits_between:5,15",
             "room_number" => "required|digits_between:0,20",
             "price" => "required|numeric",
-            "photo" => "nullable|image|mimes:png,jpg,jpeg",
+            "photo" => "nullable|image|mimes:png,jpg,jpeg|max:2048",
             "vr_video" => "nullable|string", // for now
             'room_type' => 'required|min:2|max:150',
 
@@ -83,7 +83,7 @@ class HotelsController extends BaseController
             "mobile" => "required|digits_between:5,15",
             "room_number" => "required|digits_between:0,20",
             "price" => "required|numeric",
-            "photo" => "nullable|image|mimes:png,jpg,jpeg",
+            "photo" => "nullable|image|mimes:png,jpg,jpeg|max:2048",
             "vr_video" => "nullable|string", // for now
             'room_type' => 'required|min:2|max:150',
 
