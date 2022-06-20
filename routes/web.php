@@ -57,11 +57,6 @@ foreach ($default_routes_controllers_schema as $routes_schema) {
 
 
 
-
-
-
-
-
 $router->get('/', function () use ($router) {
 
     return response("Hala Madrid Aporla 14 :)");

@@ -10,9 +10,10 @@ class CafeController extends BaseController
 {
 
 
-
-    public function index()
+    public function index(Request $request)
     {
+
+
         $cafe = Cafe::get();
         return $this->sendResponse($cafe);
     }

@@ -18,7 +18,9 @@ class BaseController extends Controller
 
         ];
 
-        return response()->json($response, $status);
+        return response()->json($response, $status)
+        // ->header('Content-Type','application/json')
+        ;
     }
 
 
